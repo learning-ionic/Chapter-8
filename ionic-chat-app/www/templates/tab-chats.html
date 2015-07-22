@@ -1,0 +1,15 @@
+<ion-view view-title="IONIC CHAT APP">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-show="chatHistory.length == 0">
+                <h3 class="text-center padding">Looks like there is no chat history</h3>
+            </ion-item>
+            <ion-item class="item-icon-right item-icon-left" ng-class="{'item-avatar' : user.picture}" ng-repeat="user in chatHistory | filter:search:user" ng-if="user.email != currUser.email" ng-click="redir('{{user}}')">
+                <img ng-src="{{user.picture}}" ng-show="user.picture">
+                <h2>{{user.name}}</h2>
+                <p>{{user.email}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

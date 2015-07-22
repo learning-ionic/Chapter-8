@@ -1,0 +1,15 @@
+<ion-view view-title="IONIC CHAT APP">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-show="users.length == 1">
+                <h3 class="text-center padding">Looks like no one is online</h3>
+            </ion-item>
+            <ion-item class="item-avatar item-icon-right" ng-repeat="user in users | filter:search:user" ng-if="user.email != currUser.email" ng-click="redir('{{user}}')">
+                <img ng-src="{{user.picture}}">
+                <h2>{{user.name}}</h2>
+                <p>{{user.email}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

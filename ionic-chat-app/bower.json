@@ -1,0 +1,14 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0"
+  },
+  "dependencies": {
+    "ngCordova": "~0.1.17-alpha",
+    "ng-cordova-oauth": "~0.1.4",
+    "firebase": "~2.2.7",
+    "angularfire": "~1.1.2",
+    "lato": "~0.3.0"
+  }
+}

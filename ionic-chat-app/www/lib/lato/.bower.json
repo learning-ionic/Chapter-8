@@ -1,0 +1,58 @@
+{
+  "name": "lato",
+  "version": "0.3.0",
+  "homepage": "https://github.com/mrkelly/lato",
+  "authors": [
+    "Michael Kelly <michael@mikeryankelly.com>"
+  ],
+  "description": "Lato Web Font Package",
+  "keywords": [
+    "lato",
+    "lato-black",
+    "lato-blackitalic",
+    "lato-bold",
+    "lato-bolditalic",
+    "lato-hairline",
+    "lato-hairlineitalic",
+    "lato-italic",
+    "lato-light",
+    "lato-lightitalic",
+    "lato-regular",
+    "webfont",
+    "web",
+    "font"
+  ],
+  "main": [
+    "./css/lato.css",
+    "./font/*"
+  ],
+  "licenses": [
+    {
+      "covers": "software",
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    },
+    {
+      "covers": "fonts",
+      "type": "OFL-1.1",
+      "url": "http://scripts.sil.org/OFL"
+    }
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "6efb9074c041c2b8d522a244da1b71665e15bbc0"
+  },
+  "_source": "git://github.com/mrkelly/lato.git",
+  "_target": "~0.3.0",
+  "_originalSource": "lato",
+  "_direct": true
+}

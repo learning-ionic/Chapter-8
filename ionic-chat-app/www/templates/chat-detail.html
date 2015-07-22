@@ -1,0 +1,28 @@
+<ion-view view-title="{{chatToUser.name}}">
+    <ion-pane>
+        <ion-content class="has-header padding">
+            <div class="button-bar">
+                <a class="button button-calm" ui-sref="tab.dash">Online Users</a>
+                <a class="button button-calm" ui-sref="tab.chats">Chat History</a>
+            </div>
+            <br>
+            <ion-list>
+                <ion-item ng-show="messages.length == 0">
+                    <h3 class="text-center">No messages yet!</h3>
+                </ion-item>
+                <ion-item class="item-avatar" ng-repeat="message in messages" ng-class="{left : message.from == user.email, right : message.from != user.email}">
+                    <img ng-src="{{user.cachedUserProfile.picture}}" ng-if="message.from == user.email">
+                    <img ng-src="{{chatToUser.picture}}" ng-if="message.from != user.email">
+                    <p ng-bind-html="message.content"></p>
+                    <map inline="true" class="inline-map" lat="{{message.map.lat}}" lon="{{message.map.lon}}" ng-if="message.map.lat && message.map.lon">
+                </ion-item>
+                <div class="padding-bottom"></div>
+            </ion-list>
+        </ion-content>
+        <ion-footer-bar class="bar-footer">
+            <input class="footerInput" type="text" placeholder="Enter Message" ng-model="chatMsg">
+            <button class="button button-dark  icon-left ion-paper-airplane" ng-click="sendMessage();"></button>
+            <button class="button button-dark  icon-left ion-more" ng-click="showActionSheet();"></button>
+        </ion-footer-bar>
+    </ion-pane>
+</ion-view>

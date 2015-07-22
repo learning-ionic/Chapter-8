@@ -1,0 +1,9 @@
+<ion-modal-view>
+    <ion-content scroll="false">
+        <map on-create="mapCreated(map)"></map>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+        <a ng-click="selectLocation()" class="button button-icon icon ion-checkmark">Share</a>
+        <a ng-click="closeModal()" class="button button-icon icon ion-close">Cancel</a>
+    </ion-footer-bar>
+</ion-modal-view>

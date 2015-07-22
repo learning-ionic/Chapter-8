@@ -1,0 +1,112 @@
+$positive: #1976D2 !default;
+$font-family-base: 'Lato',
+sans-serif !default;
+$tabs-striped-off-opacity: 1 !default;
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+.bar .title {
+    font-size: 21px;
+}
+
+.slider {
+    background-color: #eee;
+    min-height: 200px;
+    max-height: 400px;
+}
+
+ion-slide img {
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+    max-height: 350px;
+    max-width: 500px;
+}
+
+.t-r {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 20px;
+    margin-right: 5px;
+    margin-left: 25px;
+    text-align: center;
+    width: 84%;
+}
+
+.b-r {
+    position: absolute;
+    bottom: 5px;
+    margin: 20px;
+    right: 0px;
+    margin-right: 5px;
+    margin-left: 25px;
+    text-align: center;
+    width: 84%;
+}
+
+.c-c {
+    position: absolute;
+    top: 25%;
+    margin: 20px;
+    left: 0px;
+    margin-right: 5px;
+    margin-left: 25px;
+    text-align: center;
+    width: 84%;
+}
+
+ion-slide label {
+    font-size: 21px;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+    opacity: 0.8;
+}
+
+.footerInput {
+    width: 77%;
+}
+
+.chat-img {
+    width: 50%;
+}
+
+.left,
+.right {
+    width: 75%;
+    clear: both;
+    margin: 5px;
+}
+
+.left {
+    float: left;
+    text-align: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+.usr-img {
+    width: 48px;
+}
+
+map {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.inline-map {
+    height: 200px;
+    border: 1px solid #787878;
+}
+
+.scroll {
+    height: 100%;
+}

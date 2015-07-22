@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularFire Test Page</title>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+</head>
+
+<body ng-app="NamesApp" ng-controller="NamesCtrl">
+    <input type="button" ng-click="addNewName()" value="Add New Name">
+    <br>
+    <ul>
+        <li ng-repeat="n in names">
+            Name : <b> {{n.name}} </b>
+        </li>
+    </ul>
+    <script type="text/javascript">
+    var app = angular.module("NamesApp", ["firebase"]);
+
+    app.controller("NamesCtrl", function($scope, $firebaseArray) {
+        var ref = new Firebase("https://arvind.firebaseio.com/names");
+        // create a synchronized array
+        $scope.names = $firebaseArray(ref);
+
+        $scope.addNewName = function() {
+            var name = prompt('Enter Name');
+            if (name) {
+                $scope.names.$add({
+                    name: name
+                });
+            };
+        }
+    });
+    </script>
+</body>
+
+</html>

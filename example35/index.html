@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Firebase Test Page</title>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+</head>
+
+<body>
+    <input type="button" onclick="addNewName()" value="Add New Name">
+    <br>
+    <ul id="namesList"></ul>
+    <script type="text/javascript">
+    var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
+
+    ref.on('value', function(data) {
+        var names = data.val();
+        clearList();
+        for (var n in names) {
+            setName(names[n].name);
+        }
+    });
+
+    function clearList() {
+        document.querySelector('#namesList').innerHTML = '';
+    }
+
+    function setName(name) {
+        var newName = document.createElement('li');
+        newName.innerHTML = 'Name : <b>' + name + '</b>';
+        document.querySelector('#namesList').appendChild(newName);
+    }
+
+    function addNewName() {
+        var name = prompt('Enter Name');
+        if (name) {
+            // the below statement will save data to the Firebase data store and will invoke the ref.on('value') callback. This will the call the saveName to setdata
+            ref.push({
+                'name': name
+            });
+        }
+    }
+    </script>
+</body>
+
+</html>
